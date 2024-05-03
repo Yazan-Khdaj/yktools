@@ -25,7 +25,7 @@ fi
 
 if [[ -z $HISTORY_NAME ]]
 then
-    HISTORY_NAME=".config/zsh/.zsh_history"
+    HISTORY_NAME=".zsh_history"
 fi
 
 if [[ -z $DROP_CMD ]]
@@ -78,7 +78,6 @@ checkBackupDir()
 
 filterHistory()
 {
-	printf $DROP_CMD
     mostCmd="^[[:alpha:]]+[[:print:]]*[[:space:]]+[-]{0,2}."
     notHelp=".* -{1,2}(h|help|usage)"
 
